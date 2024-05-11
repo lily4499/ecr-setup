@@ -1,5 +1,3 @@
-vim Jenkinsfile-ECR
-
 pipeline {
     agent any
 
