@@ -40,13 +40,13 @@ pipeline {
             }
         }
         
-        // stage('Trigger Jenkins Job to Push Docker Image to ECR') {
-        //     steps {
-        //         script {
-        //             // Trigger another Jenkins job to push Docker image to ECR
-        //             build job: 'push-to-ECR', wait: false
-        //         }
-        //     }
-        // }
+        stage('Trigger Jenkins Job to Push Docker Image to ECR') {
+            steps {
+                script {
+                    // Trigger another Jenkins job to push Docker image to ECR
+                    build job: 'push-to-ECR', wait: false
+                }
+            }
+        }
     }
 }
